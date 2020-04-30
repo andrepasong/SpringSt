@@ -1,10 +1,12 @@
 package com.example.jy.spring.domain.posts;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Getter
 @NoArgsConstructor
 @Entity
 public class Posts {
