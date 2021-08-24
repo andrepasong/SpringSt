@@ -10,7 +10,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class Posts {
+    //Entity 클래스에는 절대 setter 를 만들지 않는다.
+    //해당 목적과 의도를 알수 있는 메소드 만들어서 이용.
 
+    //보통 id는 자동증가로 잡는걸 추천, 복합키로 하면 난감할 수 있음
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
