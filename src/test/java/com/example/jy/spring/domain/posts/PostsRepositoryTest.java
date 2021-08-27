@@ -11,7 +11,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.List;
 
 
-//SpringBootTest를 사용할 경우 자동으로 H2 데이터베이스를 실행
+//SpringBootTest 를 사용할 경우 자동으로 H2 데이터베이스를 실행
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class PostsRepositoryTest {
