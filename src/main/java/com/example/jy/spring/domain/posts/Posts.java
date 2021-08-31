@@ -1,5 +1,6 @@
 package com.example.jy.spring.domain.posts;
 
+import com.example.jy.spring.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     //Entity 클래스에는 절대 setter 를 만들지 않는다.
     //해당 목적과 의도를 알수 있는 메소드 만들어서 이용.
     //Entity 는 데이터베이스와 매칭되는 클래스로 Request/Response 로 사용하지 않는다.
@@ -32,6 +33,11 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 
 }
