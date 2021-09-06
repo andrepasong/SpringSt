@@ -28,7 +28,7 @@ public class PostsRepositoryTest {
 
     @Test
     public void testCURD() {
-        //given
+        //given(준비)
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
@@ -38,10 +38,10 @@ public class PostsRepositoryTest {
                 .author("test@mail.com")
                 .build());
 
-        //when
+        //when(실행)
         List<Posts> postsList = postsRepository.findAll();
 
-        //then
+        //then(검증)
         Posts posts = postsList.get(0);
         Assertions.assertThat(posts.getTitle()).isEqualTo(title);
         Assertions.assertThat(posts.getContent()).isEqualTo(content);
