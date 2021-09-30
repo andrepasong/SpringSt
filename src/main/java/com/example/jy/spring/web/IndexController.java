@@ -18,7 +18,7 @@ public class IndexController {
     private final PostsService postsService;
 
     // mustache 를 사용하게 되면 기본 경로(src/main/resources/templates)에 mustache 파일이 위치하게 된다.(html 등등의 기본위치)
-    // 뒤에 확장자(.mustache)는 생략을 한 순수한 파일의 이름만 반환하면 된다.
+    // 뒤에 확장자(.mustache)는 생략한 순수한 파일이름만 반환하면 된다.
     // 아래와 같이 index 를 반환하게 되면
     // src/main/resources/templates/index.mustache 를 찾아서 View Resolver 가 처리하게 된다.
     @GetMapping("/")
